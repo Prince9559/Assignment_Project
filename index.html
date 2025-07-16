@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CLAT NLTI - Crash Course 2026</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      color: #333;
+    }
+    header {
+      background: #004080;
+      color: #fff;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    header nav a {
+      color: #fff;
+      margin: 0 0.5rem;
+      text-decoration: none;
+    }
+    .hero {
+      background: #f0f0f0;
+      text-align: center;
+      padding: 5rem 1rem;
+    }
+    .hero button {
+      padding: 0.5rem 1rem;
+      background: #ff8000;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+    }
+    .crash-course, .course {
+      background: #f9f9f9;
+      padding: 2rem;
+      margin: 1rem;
+      border-radius: 8px;
+    }
+    .crash-course button, .course button {
+      margin: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: #004080;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    #demo-videos .videos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 1rem;
+    }
+    .video-card {
+      flex: 1 1 300px;
+      background: #eee;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+    .testimonial-slider {
+      display: flex;
+      overflow-x: auto;
+      gap: 1rem;
+      padding: 1rem;
+    }
+    .testimonial {
+      min-width: 250px;
+      background: #fff;
+      border: 1px solid #ccc;
+      padding: 1rem;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .testimonial img {
+      max-width: 100px;
+      border-radius: 50%;
+    }
+    footer {
+      background: #004080;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+    }
+    @media (max-width: 768px) 
+    {
+      .hero 
+      {
+        padding: 3rem 1rem;
+      }
+      #demo-videos .videos 
+      {
+        flex-direction: column;
+      }
+      .testimonial-slider 
+      {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>CLAT NLTI Coaching</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#courses">Courses</a>
+      <a href="#crash-course">Crash Course</a>
+      <a href="#testimonials">Testimonials</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Welcome to CLAT NLTI</h2>
+    <p>Expert Coaching for CLAT 2026 Aspirants</p>
+    <button>Explore Courses</button>
+  </section>
+
+  <section id="crash-course" class="crash-course">
+    <h2>CLAT Crash Course 2026</h2>
+    <p><strong>Limited-time offer:</strong> ₹9999 only!</p>
+    <ul>
+      <li>2 classes per subject</li>
+      <li>Personal mentorship</li>
+      <li>Mock tests & analysis</li>
+      <li>Live doubt sessions</li>
+    </ul>
+    <p><strong>Start Date:</strong> 15th August 2025</p>
+    <button>Book Now</button>
+  </section>
+
+  <section id="courses" class="course">
+    <h2>CLAT Full Course</h2>
+    <p>Comprehensive live classes, mentorship, and mocks</p>
+    <ul>
+      <li>100+ Live Sessions</li>
+      <li>Mock Test Series</li>
+      <li>Doubt Clearing Sessions</li>
+    </ul>
+    <p><strong>Eligibility:</strong> 12th Appearing or Passed</p>
+    <p><strong>Duration:</strong> 6 months</p>
+    <button>Book Now</button>
+    <button>Get a Call Back</button>
+  </section>
+
+ 
+   <section id="demo-videos">
+  <h2>Demo Classes</h2>
+  <div class="videos">
+    <div class="video-card">
+      <p>CLAT Exam Strategy - Demo Class</p>
+      <a href="https://www.youtube.com/watch?v=luIElJkkFI0" target="_blank">
+        <button>Watch on YouTube</button>
+      </a>
+    </div>
+    <div class="video-card">
+      <p>CLAT Legal Reasoning Session</p>
+      <a href="https://www.youtube.com/watch?v=luIElJkkFI0" target="_blank">
+        <button>Watch on YouTube</button>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+  <section id="testimonials">
+    <h2>What Our Students Say</h2>
+    <div class="testimonial-slider">
+      <div class="testimonial">
+        <img src="pic/stu.jpg" alt="Student Photo" />
+        <p>"Amazing guidance and support!"</p>
+        <h4>- Priya Sharma, CLAT 2025 Topper</h4>
+      </div>
+      <div class="testimonial">
+        <img src="pic/gi.jpg" alt="Student Photo" />
+        <p>"Mocks and mentorship helped me crack CLAT."</p>
+        <h4>- Rahul Verma, CLAT 2025</h4>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 CLAT NLTI. All rights reserved.</p>
+  </footer>
+</body>
+</html>
