@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scoreazy Mentorship Program | Book a Session</title>
+  <meta name="description" content="Join Scoreazy's Counseling & Mentorship Program to get personalised guidance and boost academic confidence. Book your session today!" />
+  <meta name="keywords" content="Scoreazy, Mentorship, Counseling, Student Guidance, Personalized Learning, Book Session" />
+  <link rel="canonical" href="https://yourdomain.com/scoreazy-mentorship" />
+  <style>
+    :root {
+      --primary:#4f46e5;
+      --dark:#1f2937;
+      --radius:12px;
+      --shadow:0 14px 40px -10px rgba(79,70,229,0.2);
+      font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0;}
+
+    body{background:#f5f7faec;color:#1f2937;line-height:1.6;}
+    .container{max-width:1100px;margin:0 auto;padding:0 1rem;}
+    header{padding:1rem 0;display:flex;justify-content:space-between;align-items:center;}
+    .logo{font-weight:700;font-size:1.25rem;color: var(--primary);}
+    nav a{margin-left:1rem;text-decoration:none;color:#374151;font-weight:500;font-size:.9rem;}
+    .hero{
+      display:flex;
+      flex-wrap:wrap;
+      gap:2rem;
+      padding:3rem 0;
+      align-items:center;
+    }
+    .hero-text{
+      flex:1 1 400px;
+    }
+
+    .tagline{font-size:.9rem;text-transform:uppercase;letter-spacing:1px;color:#6366f1;font-weight:600;margin-bottom:.5rem;}
+    .hero-title{font-size:2.5rem;font-weight:700;margin-bottom:1rem;}
+    .hero-desc{font-size:1.05rem;margin-bottom:1.25rem;color:#4b5563;}
+    .btn{display:inline-block;padding:.85rem 1.5rem;border:none;border-radius:8px;font-weight:600;cursor:pointer;text-decoration:none;transition:all .2s;box-shadow: var(--shadow);}
+    .btn-primary{background: var(--primary);color:#fff;}
+    .btn-primary:hover{filter:brightness(1.05);}
+    .hero-image{
+      flex:1 1 320px;
+      position:relative;
+      min-width:260px;
+    }
+    .hero-image img{
+      width:100%;
+      border-radius:16px;
+      object-fit:cover;
+      box-shadow: var(--shadow);
+    }
+    .badge{
+      display:inline-block;
+      background: #eef2ff;
+      color: #4f46e5;
+      padding:.35rem .75rem;
+      font-size:.65rem;
+      border-radius:999px;
+      margin-bottom:1rem;
+      font-weight:600;
+    }
+    .section{
+      padding:4rem 0;
+    }
+    .section-title{
+      text-align:center;
+      font-size:1.9rem;
+      font-weight:700;
+      margin-bottom:.5rem;
+    }
+    .subtitle{
+      text-align:center;
+      font-size:1rem;
+      color:#6b7280;
+      margin-bottom:2rem;
+    }
+    .cards{
+      display:grid;
+      gap:1.5rem;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      margin-top:1rem;
+    }
+    .card{
+      background:#fff;
+      padding:1.5rem;
+      border-radius:14px;
+      position:relative;
+      overflow:hidden;
+      box-shadow:0 25px 50px -12px rgba(0,0,0,0.08);
+    }
+    .card h3{margin-bottom:.75rem;font-size:1.15rem;}
+    .card p{font-size:.95rem;color:#4b5563;}
+    .steps{
+      display:flex;
+      flex-wrap:wrap;
+      gap:1.5rem;
+      margin-top:1rem;
+    }
+    .step{
+      flex:1 1 220px;
+      background:#fff;
+      border-radius:14px;
+      padding:1rem 1.25rem;
+      position:relative;
+      box-shadow:0 18px 40px -12px rgba(0,0,0,0.07);
+    }
+    .step-number{
+      background: var(--primary);
+      color:#fff;
+      width:32px;
+      height:32px;
+      border-radius:50%;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      margin-bottom:.5rem;
+      font-size:.9rem;
+    }
+    .testimonials{
+      display:grid;
+      gap:1.5rem;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      margin-top:1rem;
+    }
+    .testimonial{
+      background:#fff;
+      padding:1.5rem;
+      border-radius:14px;
+      position:relative;
+      box-shadow:0 30px 60px -15px rgba(0,0,0,0.06);
+    }
+    .testimonial p{font-size:.95rem;margin-bottom:1rem;color:#374151;}
+    .author{display:flex;gap:.75rem;align-items:center;font-size:.85rem;font-weight:600;color:#374151;}
+    .author img{width:40px;height:40px;border-radius:50%;object-fit:cover;display:inline-block;border:2px solid #e5e7eb;}
+    .faq-list{display:grid;gap:1rem;max-width:900px;margin:0 auto;margin-top:1rem;}
+    .faq{
+      background:#fff;
+      border-radius:12px;
+      padding:1rem 1.25rem;
+      box-shadow:0 18px 40px -12px rgba(0,0,0,0.05);
+    }
+    .faq summary{font-weight:600;cursor:pointer;font-size:1rem;outline:none;}
+    .faq p{margin-top:.5rem;font-size:.9rem;color:#4b5563;}
+    .final-cta{
+      background: linear-gradient(135deg,#6366f1 0%,#a78bfa 100%);
+      color:#fff;
+      border-radius:16px;
+      padding:2rem 1rem;
+      margin-top:2rem;
+      display:flex;
+      flex-wrap:wrap;
+      gap:1rem;
+      align-items:center;
+      justify-content:space-between;
+    }
+    .final-cta .text{flex:1 1 300px;}
+    .final-cta h2{font-size:1.75rem;margin-bottom:.5rem;}
+    .footer{
+      padding:2rem 0;
+      text-align:center;
+      font-size:.85rem;
+      color:#6b7280;
+    }
+    
+    @media (max-width: 900px){
+      .hero-title{font-size:2rem;}
+      .hero{flex-direction:column-reverse;}
+      .final-cta{flex-direction:column;align-items:flex-start;}
+    }
+    .small{font-size:.75rem;color:#9ca3af;}
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header aria-label="Main header">
+      <div class="logo">Scoreazy</div>
+      <nav aria-label="Primary navigation">
+        <a href="#features">Features</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#faq">FAQs</a>
+        <a href="#book" class="btn btn-primary" style="margin-left:8px;">Book Now</a>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" aria-label="Hero section">
+      <div class="hero-text">
+        <div class="badge">Counseling & Mentorship</div>
+        <h1 class="hero-title">Personalized Guidance for Academic Success</h1>
+        <p class="hero-desc">
+          Join Scoreazy's Mentorship Program to get one-on-one expert guidance, build confidence, and
+          create a roadmap tailored to your goals. Book a free intro session now.
+        </p>
+        <a href="#book" class="btn btn-primary" aria-label="Book a session">Book Your Session</a>
+      </div>
+      <div class="hero-image" aria-label="Illustration of mentorship">
+        <img src="pic/kk.jpg" alt="Mentor guiding student illustration" />
+      </div>
+    </section>
+
+    
+    <section class="section" id="features" aria-label="Benefits section">
+      <div class="section-title">Why Join the Mentorship Program?</div>
+      <div class="subtitle">Tailored support that grows with you — clarity, confidence, and results.</div>
+      <div class="cards">
+        <div class="card">
+          <h3>One-on-One Counseling</h3>
+          <p>Dedicated mentors assess your strengths and craft a personalized action plan.</p>
+        </div>
+        <div class="card">
+          <h3>Academic Roadmap</h3>
+          <p>Clear short-term and long-term goals with tracking to ensure steady progress.</p>
+        </div>
+        <div class="card">
+          <h3>Confidence Building</h3>
+          <p>Focus on mindset, study habits, and overcoming fear of exams or topics.</p>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="section" aria-label="How it works">
+      <div class="section-title">How It Works</div>
+      <div class="subtitle">Simple 3-step process to get started quickly.</div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h4>Book Intro Session</h4>
+          <p>Pick a convenient time and tell us your goals and pain points.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h4>Personalized Plan</h4>
+          <p>Mentor shares a custom roadmap and resources suited for you.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h4>Ongoing Support</h4>
+          <p>Weekly check-ins, feedback, and adjustments based on your progress.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section" id="testimonials" aria-label="Testimonials">
+      <div class="section-title">What Students Say</div>
+      <div class="subtitle">Real feedback from learners who improved with mentorship.</div>
+      <div class="testimonials">
+        <div class="testimonial">
+          <p>"Mentorship helped me structure my revision and boosted my confidence before exams."</p>
+          <div class="author">
+            <img src="pic/gi.jpg" alt="Student photo" />
+            <div>
+              <div><strong>Radha Sharma</strong></div>
+              <div class="small">Class 10, Varanasi</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <p>"The roadmap was clear, and weekly follow-ups kept me accountable."</p>
+          <div class="author">
+            <img src="pic/pp.jpg" alt="Student photo" />
+            <div>
+              <div><strong>Neha Gupta</strong></div>
+              <div class="small">Parent of Class 9 Student</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <p>"I used to get confused; now I study with purpose. Thank you Scoreazy!"</p>
+          <div class="author">
+            <img src="pic/gg.jpg" alt="Student photo" />
+            <div>
+              <div><strong>Riya Patel</strong></div>
+              <div class="small">Class 11</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section" id="faq" aria-label="Frequently asked questions">
+      <div class="section-title">Frequently Asked Questions</div>
+      <div class="subtitle">Clear answers before you book.</div>
+      <div class="faq-list">
+        <details class="faq">
+          <summary>Who is this mentorship for?</summary>
+          <p>Students who want structured academic support, clarity on goals, and confidence building across grades 8–12.</p>
+        </details>
+        <details class="faq">
+          <summary>How long is a typical engagement?</summary>
+          <p>Most students start with a 4-week pilot, with weekly 1-hour sessions and progress reviews.</p>
+        </details>
+        <details class="faq">
+          <summary>Can I change my mentor?</summary>
+          <p>Yes. If you feel the fit isn’t right, we’ll match you with another mentor after feedback.</p>
+        </details>
+        <details class="faq">
+          <summary>Is there any trial?</summary>
+          <p>Yes, we offer a free 30-minute intro session to understand your needs and explain the program.</p>
+        </details>
+      </div>
+    </section>
+
+    
+    <section class="final-cta" id="book" aria-label="Final call to action">
+      <div class="text">
+        <h2>Ready to get personalized support?</h2>
+        <p style="margin-bottom:8px;">Book your free intro session and start building your roadmap today.</p>
+      </div>
+      <div>
+        <a href="#" class="btn btn-primary" aria-label="Book session now" style="font-size:1rem;">Book a Session</a>
+      </div>
+    </section>
+
+    
+    <footer class="footer" aria-label="Footer">
+      <p>&copy; 2025 Scoreazy. All rights reserved. Designed for students and parents. | <span class="small">Built with clarity, performance, and trust.</span></p>
+    </footer>
+  </div>
+
+</body>
+</html>

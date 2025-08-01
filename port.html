@@ -1,0 +1,264 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Scoreazy Internship Assignment Submission</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Submit your Scoreazy Web Development Intern assignment" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+    rel="stylesheet" />
+  <style>
+    :root {
+      --accent: #6366f1;
+      --radius: 10px;
+      --shadow: 0 25px 50px -12px rgba(99, 102, 241, 0.25);
+      font-family: 'Inter', system-ui,-apple-system,BlinkMacSystemFont,sans-serif;
+      background: #f5f7fa;
+      color: #1f2d47;
+    }
+
+    * { box-sizing:border-box; }
+
+    body {
+      margin: 0;
+      padding: 0;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:1rem;
+    }
+
+    .card {
+      max-width: 900px;
+      width: 100%;
+      background: #fff;
+      border-radius: var(--radius);
+      padding: 2rem 2.5rem;
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: 1.9rem;
+    }
+
+    h2 {
+      margin-bottom: .5rem;
+      font-size: 1.3rem;
+    }
+
+    p {
+      margin: .5rem 0 1rem;
+      line-height:1.5;
+    }
+
+    .badge {
+      display:inline-block;
+      background: var(--accent);
+      color:#fff;
+      padding:6px 14px;
+      border-radius:999px;
+      font-size:.75rem;
+      text-transform:uppercase;
+      letter-spacing:1px;
+      margin-bottom:8px;
+    }
+
+    .grid {
+      display:grid;
+      gap:1.5rem;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      margin-bottom:1rem;
+    }
+
+    label {
+      display:block;
+      font-weight:600;
+      margin-bottom:4px;
+      font-size:.9rem;
+    }
+
+    input, textarea {
+      width:100%;
+      padding:10px 14px;
+      border:1px solid #dde4ec;
+      border-radius:8px;
+      font-size:1rem;
+      margin-bottom:12px;
+      outline:none;
+      transition: .2s;
+    }
+
+    input:focus, textarea:focus {
+      border-color: var(--accent);
+      box-shadow:0 0 0 4px rgba(99,102,241,0.15);
+    }
+
+    .btn {
+      background: var(--accent);
+      color:#fff;
+      border:none;
+      padding:12px 20px;
+      border-radius:8px;
+      cursor:pointer;
+      font-weight:600;
+      font-size:1rem;
+    }
+
+    .small {
+      font-size:.8rem;
+      color:#555;
+    }
+
+    .note {
+      background: #eef4ff;
+      padding:12px 16px;
+      border-radius:8px;
+      margin:1rem 0;
+      border:1px solid rgba(99,102,241,.3);
+    }
+
+    .flex {
+      display:flex;
+      gap:1rem;
+      flex-wrap:wrap;
+    }
+
+    .inline {
+      display:inline-block;
+    }
+
+    .output {
+      background: #f0f4ff;
+      padding:12px 16px;
+      border-radius:6px;
+      font-family: monospace;
+      overflow-x:auto;
+      margin-top:6px;
+    }
+
+    a {
+      color: var(--accent);
+    }
+
+    .meta {
+      font-size:.85rem;
+      margin-bottom:4px;
+    }
+
+    .footer {
+      margin-top:2rem;
+      font-size:.75rem;
+      text-align:center;
+      color:#666;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card" aria-label="Scoreazy assignment submission helper">
+    <div style="display:flex;justify-content:space-between;align-items:start;gap:1rem;flex-wrap:wrap;">
+      <div style="flex:1;min-width:260px;">
+        <div class="badge">Scoreazy Internship</div>
+        <h1>Web Dev Intern Assignment</h1>
+        <p>Submit your completed assignment by <strong>3rd August 2025, 10:00 PM IST</strong> to <code>internship@scoreazy.com</code>.</p>
+        <div class="note">
+          <strong>Required in submission:</strong>
+          <ul style="padding-left:18px;margin:6px 0;">
+            <li>Full name</li>
+            <li>Email ID</li>
+            <li>Role applied for (Web Development Intern)</li>
+            <li>Assignment (Google Doc link with access enabled or PDF)</li>
+          </ul>
+        </div>
+        <p class="small">Also complete the mandatory Google Form by <strong>2nd August 2025</strong>:</p>
+        <p><a href="https://forms.gle/rS21c9pg4tnSCk249" target="_blank" rel="noopener">https://forms.gle/rS21c9pg4tnSCk249</a></p>
+      </div>
+      <div style="flex:1;min-width:260px;">
+        <h2>Prepare submission email</h2>
+        <form id="emailForm">
+          <div class="grid">
+            <div>
+              <label for="fullName">Full Name</label>
+              <input type="text" id="fullName" placeholder="Prince Kumar" required />
+            </div>
+            <div>
+              <label for="email">Your Email</label>
+              <input type="email" id="email" placeholder="you@example.com" required />
+            </div>
+          </div>
+          <div class="grid">
+            <div>
+              <label for="role">Role Applying For</label>
+              <input type="text" id="role" value="Web Development Intern" required />
+            </div>
+            <div>
+              <label for="assignmentLink">Assignment Link</label>
+              <input type="url" id="assignmentLink" placeholder="https://docs.google.com/..." required />
+            </div>
+          </div>
+          <div>
+            <label for="extra">Additional Notes (optional)</label>
+            <textarea id="extra" rows="2" placeholder="E.g., Attached PDF, demo hosted at..."></textarea>
+          </div>
+          <div style="margin-top:8px;">
+            <button type="button" class="btn" id="generateEmail">Generate Email Draft</button>
+          </div>
+        </form>
+        <div id="emailOutput" style="margin-top:12px;display:none;">
+          <p class="meta"><strong>Subject:</strong> Scoreazy Internship Assignment Submission – <span id="outName"></span></p>
+          <p class="meta"><strong>To:</strong> internship@scoreazy.com</p>
+          <div>
+            <p><strong>Body (copy into your email client):</strong></p>
+            <div class="output" id="bodyText"></div>
+          </div>
+          <div style="margin-top:8px;">
+            <a id="mailtoLink" href="#" class="btn" target="_blank">Open in Email App</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div>Make sure your Google Doc link has access enabled (anyone with link can view or specifically shared with internship@scoreazy.com).</div>
+      <div>Filename suggestion when zipping: <code>PrinceKumar_WebDevAssignment.zip</code></div>
+    </div>
+  </div>
+
+  <script>
+    function escapeLine(str) {
+      return str.replace(/\n/g, '%0D%0A');
+    }
+
+    document.getElementById('generateEmail').addEventListener('click', () => {
+      const name = document.getElementById('fullName').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const role = document.getElementById('role').value.trim();
+      const assignmentLink = document.getElementById('assignmentLink').value.trim();
+      const extra = document.getElementById('extra').value.trim();
+
+      if (!name || !email || !role || !assignmentLink) {
+        alert('Please fill all required fields.');
+        return;
+      }
+
+      const subject = `Scoreazy Internship Assignment Submission – ${name}`;
+      let body = `Dear Scoreazy Team,%0D%0A%0D%0AMy name is ${name} and I am applying for the ${role} role.%0D%0AEmail: ${email}%0D%0A%0D%0AI have attached/submitted my assignment here: ${assignmentLink}%0D%0A`;
+      if (extra) body += `%0D%0AAdditional Notes: ${extra}%0D%0A`;
+      body += `%0D%0AThank you for the opportunity.%0D%0ARegards,%0D%0A${name}`;
+
+      const mailto = `mailto:internship@scoreazy.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+      document.getElementById('emailOutput').style.display = 'block';
+      document.getElementById('outName').textContent = name;
+      document.getElementById('bodyText').textContent = decodeURIComponent(body.replace(/%0D%0A/g, '\n'));
+      const linkEl = document.getElementById('mailtoLink');
+      linkEl.href = mailto;
+    });
+  </script>
+</body>
+
+</html>
